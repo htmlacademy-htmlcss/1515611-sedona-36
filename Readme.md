@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Александра Черкасова](https://up.htmlacademy.ru/htmlcss/36/user/1515611).
-* Наставник: `Павел Нюкало (https://htmlacademy.ru/profile/id869225)`.
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/id869225).
 
 ---
 
