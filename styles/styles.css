@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-400.woff2") format("woff2");
+  font-display: swap;
+
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-700.woff2") format("woff2");
+  font-display: swap;
+}
+/*------------------------------------------------------*/
+body {
+  font-family: "PT-Sans","Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 700px;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*Pages*/
+
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.navigation-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #000000;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: #ffffff;
+  background-image: url("../images/photos/index-background.jpg");
+  min-height: 831px;
+  color: #000000;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+}
+
+/*List*/
+.advantages-list {
+  background-color: #6495ed;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.services {
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages p, .services p, .purchase p {
+  color: #000000;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: none;
+  text-align: center;
+}
+
+.purchase {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.subscription {
+  background-color: #6495ed;
+  color: #ffffff;
+  text-align: center;
+}
+
+.subscription p {
+  color: #ffffff;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: center;
+  text-transform: none;
+}
+
+.footer-contacts {
+  background-color: #6495ed;
+  background-image: url("../images/photos/subscribe-sedona.png");
+  min-height: 414.86px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.footer-contacts a {
+  color: #000000;
+  text-align: center;
+}
+
+.title-color {
+  color:white;
+}
+
