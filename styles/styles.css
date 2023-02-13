@@ -20,8 +20,6 @@ html {
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
   min-height: 100%;
   font-family: "PT-Sans","Arial", sans-serif;
   font-size: 18px;
@@ -29,12 +27,6 @@ body {
   color: #000000;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
-}
-.main-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .button {
@@ -85,7 +77,7 @@ body {
   flex-grow: 1;
   background-color: #ffffff;
   background-image: url("../images/photos/index-background.jpg");
-  min-height: 767px;
+  min-height: 485px;
   color: #000000;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -93,20 +85,22 @@ body {
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 1200px;
   margin: 0 auto;
 }
-
 
 /*Advantages*/
 
 .advantages {
   flex-grow: 1;
 }
+
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   background-color: #6495ed;
@@ -115,9 +109,15 @@ body {
 }
 
 .advantages-item {
-  display:flex;
   width: 400px;
   height: 400px;
+}
+
+.advantages-item-size {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 1200px;
 }
 
 .advantages-title {
@@ -127,13 +127,12 @@ body {
   color: #000000;
 }
 
-
 /*Services*/
 
 .services-list {
   display: flex;
-  flex-wrap:no-wrap;
-  flex-direction:row;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .services {
@@ -162,8 +161,8 @@ body {
   text-align: center;
 }
 
-.purchase-container{
-  flex-grow:1;
+.purchase-container {
+  flex-grow: 1;
 }
 
 /*Footer*/
@@ -197,11 +196,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .contacts-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
 .title-color {
   color: white;
 }
