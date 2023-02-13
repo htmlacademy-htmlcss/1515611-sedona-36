@@ -13,12 +13,28 @@
   src: url("../fonts/pt-sans-700.woff2") format("woff2");
   font-display: swap;
 }
-/*------------------------------------------------------*/
+
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT-Sans","Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
+}
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .button {
@@ -33,11 +49,25 @@ body {
   text-transform: uppercase;
 }
 
-/*Pages*/
-
 .page-header {
   color: #000000;
   background-color: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -48,23 +78,46 @@ body {
   text-transform: capitalize;
   color: #000000;
   text-decoration: none;
+  margin-left: auto;
 }
 
 .hero {
+  flex-grow: 1;
   background-color: #ffffff;
   background-image: url("../images/photos/index-background.jpg");
-  min-height: 831px;
+  min-height: 767px;
   color: #000000;
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-transform: uppercase;
 }
 
-/*List*/
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+/*Advantages*/
+
+.advantages {
+  flex-grow: 1;
+}
 .advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   background-color: #6495ed;
   text-align: center;
   text-transform: uppercase;
+}
+
+.advantages-item {
+  display:flex;
+  width: 400px;
+  height: 400px;
 }
 
 .advantages-title {
@@ -74,7 +127,17 @@ body {
   color: #000000;
 }
 
+
+/*Services*/
+
+.services-list {
+  display: flex;
+  flex-wrap:no-wrap;
+  flex-direction:row;
+}
+
 .services {
+  flex-grow: 1;
   color: #000000;
   background-color: #ffffff;
   font-size: 24px;
@@ -99,6 +162,12 @@ body {
   text-align: center;
 }
 
+.purchase-container{
+  flex-grow:1;
+}
+
+/*Footer*/
+
 .subscription {
   background-color: #6495ed;
   color: #ffffff;
@@ -119,14 +188,21 @@ body {
   min-height: 414.86px;
   background-size: 100% auto;
   background-repeat: no-repeat;
+
 }
 
 .footer-contacts a {
   color: #000000;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
-
+.contacts-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 .title-color {
-  color:white;
+  color: white;
 }
 
