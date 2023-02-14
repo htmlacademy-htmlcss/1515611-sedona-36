@@ -53,7 +53,6 @@ body {
 
 .navigation-list {
   display: flex;
-  flex-direction: row;
   margin: 0;
   padding: 0;
 }
@@ -115,7 +114,6 @@ body {
 
 .advantages-item-size {
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
   width: 1200px;
 }
@@ -131,8 +129,7 @@ body {
 
 .services-list {
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .services {
@@ -199,7 +196,6 @@ body {
 
 .contacts-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
 }
 
