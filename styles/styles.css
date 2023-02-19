@@ -29,6 +29,17 @@ body {
   outline-offset: -5px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
   font-family: inherit;
   font-size: 16px;
@@ -39,8 +50,16 @@ body {
   background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
+  width: 160px;
+  height: 36px;
+  border-radius: 4px;
 }
 
+.button-all-hotels {
+  padding: 8px 50px 8px 50px;
+  width: 376px;
+  margin-bottom: 96px;
+}
 .page-header {
   color: #000000;
   background-color: #ffffff;
@@ -53,15 +72,26 @@ body {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .navigation-user {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
+.navigation-user .navigation-link-2 {
+  min-width: 16px;
+  min-height: 20px;
+}
+
 .navigation-link {
+  display: block;
+  padding: 20px 16px 20px 16px;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -91,6 +121,11 @@ body {
   margin: 0 auto;
 }
 
+.logo {
+  display: block;
+  margin-bottom: 0;
+}
+
 /*Advantages*/
 
 .advantages {
@@ -105,11 +140,14 @@ body {
   background-color: #6495ed;
   text-align: center;
   text-transform: uppercase;
+  list-style-type: none;
 }
 
 .advantages-item {
   width: 400px;
   height: 400px;
+  align-items: center;
+  padding: 112,5px 112,5px 216,5px 112,5px;
 }
 
 .advantages-item-size {
@@ -129,11 +167,16 @@ body {
 
 .services-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  height: 400px;
+  background-color: #6495ed;
+  align-items: center;
+  padding: 112,5px 112,5px 216,5px 112,5px;
+  list-style-type: none;
 }
 
 .services {
-  flex-grow: 1;
   color: #000000;
   background-color: #ffffff;
   font-size: 24px;
@@ -150,6 +193,12 @@ body {
   text-align: center;
 }
 
+.advantages p:first-child, .services p:first-child, .subscription p:first-of-type,
+.purchase p:first-child, .purchase p:first-of-type, .services .title-uppercase {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .purchase {
   background-color: #ffffff;
   color: #000000;
@@ -159,15 +208,28 @@ body {
 }
 
 .purchase-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-grow: 1;
+  align-items: center;
 }
 
 /*Footer*/
 
-.subscription {
-  background-color: #6495ed;
+.subscription-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #ffffff;
   text-align: center;
+  background-image: url("../images/photos/subscribe-sedona.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  margin:0;
+  padding:0;
+  min-height: 414px;
 }
 
 .subscription p {
@@ -176,15 +238,6 @@ body {
   line-height: inherit;
   text-align: center;
   text-transform: none;
-}
-
-.footer-contacts {
-  background-color: #6495ed;
-  background-image: url("../images/photos/subscribe-sedona.png");
-  min-height: 414.86px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-
 }
 
 .footer-contacts a {
@@ -197,9 +250,17 @@ body {
 .contacts-container {
   display: flex;
   justify-content: space-around;
+  vertical-align: center;
 }
 
+.social-media {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .title-color {
   color: white;
 }
+
 
