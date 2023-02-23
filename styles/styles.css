@@ -40,6 +40,19 @@ body {
   overflow: hidden;
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 0;
+}
+
 .button {
   font-family: inherit;
   font-size: 16px;
@@ -51,7 +64,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   width: 160px;
-  height: 36px;
+  min-height: 36px;
   border-radius: 4px;
 }
 
@@ -60,19 +73,20 @@ body {
   width: 376px;
   margin-bottom: 96px;
 }
+
 .page-header {
   color: #000000;
   background-color: #ffffff;
 }
 
-.navigation {
+.navigation-header {
   display: flex;
   margin: 0 auto;
 }
 
 .navigation-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -99,7 +113,6 @@ body {
   text-transform: capitalize;
   color: #000000;
   text-decoration: none;
-  margin-left: auto;
 }
 
 .hero {
@@ -113,19 +126,6 @@ body {
   text-transform: uppercase;
 }
 
-.page-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.logo {
-  display: block;
-  margin-bottom: 0;
-}
-
 /*Advantages*/
 
 .advantages {
@@ -134,10 +134,12 @@ body {
 
 .advantages-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  background-color: #6495ed;
+  background-color: #83B3D3;
   text-align: center;
   text-transform: uppercase;
   list-style-type: none;
@@ -145,9 +147,23 @@ body {
 
 .advantages-item {
   width: 400px;
-  height: 400px;
+  height: 385px;
   align-items: center;
-  padding: 112,5px 112,5px 216,5px 112,5px;
+  justify-content: center;
+}
+
+.advantages-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 385px;
+}
+
+.item-middle {
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 .advantages-item-size {
@@ -165,17 +181,6 @@ body {
 
 /*Services*/
 
-.services-list {
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: nowrap;
-  height: 400px;
-  background-color: #6495ed;
-  align-items: center;
-  padding: 112,5px 112,5px 216,5px 112,5px;
-  list-style-type: none;
-}
-
 .services {
   color: #000000;
   background-color: #ffffff;
@@ -183,6 +188,22 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #6495ed;
+  align-items: center;
+  list-style-type: none;
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  height: 385px;
+  width: 400px;
+  vertical-align: center;
 }
 
 .advantages p, .services p, .purchase p {
@@ -199,12 +220,15 @@ body {
   text-transform: uppercase;
 }
 
+ /*Purchase*/
+
 .purchase {
   background-color: #ffffff;
   color: #000000;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
+  min-height: 406px;
 }
 
 .purchase-container {
@@ -217,7 +241,7 @@ body {
 
 /*Footer*/
 
-.subscription-container {
+.subscription {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,8 +251,8 @@ body {
   background-image: url("../images/photos/subscribe-sedona.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   min-height: 414px;
 }
 
@@ -250,17 +274,24 @@ body {
 .contacts-container {
   display: flex;
   justify-content: space-around;
-  vertical-align: center;
+  align-items: center;
 }
 
 .social-media {
   display: flex;
   list-style-type: none;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.social-media li {
+  margin-left: 20px;
+}
+
 .title-color {
   color: white;
 }
 
-
+.main-container .advantages .title-uppercase {
+text-transform: uppercase;
+font-weight: bold;
+}
