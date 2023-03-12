@@ -11,7 +11,7 @@
   <div class="page-container">
     <header class="page-header">
       <nav class="navigation-header">
-        <div>
+        <div class="nav-container-1">
           <a>
             <img class="logo" src="images/logos/logo-2.svg" width="140" height="70" alt="Лого Седоны.">
           </a>
@@ -29,8 +29,9 @@
                 d="m18.5 17-3.7-3.7a8 8 0 0 0 1.7-4.8 8 8 0 1 0-3.1 6.3l3.7 3.7 1.4-1.5Zm-10-2.5a6 6 0 0 1-6-6 6 6 0 0 1 12 0 6 6 0 0 1-6 6Z" />
             </svg>
           </a>
-          <a href="#">
+          <a class="heart" href="#">
             <span class="visually-hidden">Избранное.</span>
+            <span class="favourites">12</span>
             <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
               <path fill="#000"
                 d="M9.9 19a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5 6.1 6.9 6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
@@ -43,8 +44,7 @@
     <main class="main-container">
       <section class="hero">
         <h1 class="visually-hidden">Седона.</h1>
-        <img class="hero-text" src="images/welcome.png" alt="Добро пожаловать в Седону" />
-        <img class="hero-steps" src="images/divider.png" alt="Лесенка">
+        <div class="hero-imgs"></div>
       </section>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества.</h2>
@@ -55,42 +55,30 @@
         <ul class="advantages-list">
           <li class="advantages-img-container">
             <div class="advantages-content-container container-background-1">
-              <h3>
-                <div class="titles-uppercase title-color">Настоящий городок</div>
-              </h3>
+              <h3 class="titles-uppercase title-color">Настоящий городок</h3>
               <p class="lowercase-fonts title-color">Седона — не аттракцион для туристов, там
-                течёт своя жизнь
-              </p>
+                течёт своя жизнь</p>
             </div>
             <img src="images/photos/sedona-town.jpg" width="800" height="385" alt="Фото Седоны.">
           </li>
           <li class="advantages-content-container container-background-2">
-            <h3>
-              <div class="titles-uppercase">Небольшая площадь</div>
-            </h3>
+            <h3 class="titles-uppercase">Небольшая площадь</h3>
             <p class="lowercase-fonts">Все достопримечательности находятся очень близко</p>
           </li>
           <li class="advantages-content-container container-background-3">
-            <h3>
-              <div class="titles-uppercase">Красивая дорога</div>
-            </h3>
+            <h3 class="titles-uppercase">Красивая дорога</h3>
             <p class="lowercase-fonts">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="advantages-content-container container-background-2">
-            <h3>
-              <div class="titles-uppercase">Мало туристов</div>
-            </h3>
+            <h3 class="titles-uppercase">Мало туристов</h3>
             <p class="lowercase-fonts">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="advantages-img-container">
             <img src="images/photos/devils-bridge.jpg" width="800" height="385" alt="Мост дъявола.">
             <div class="advantages-content-container container-background-1">
-              <h3>
-                <div class="titles-uppercase title-color">Там есть мост дъявола</div>
-              </h3>
-              <p class="lowercase-fonts title-color">Да, по нему можно пройти!<br> Если вы
-                осмелитесь,<br>
-                разумеется</p>
+              <h3 class="titles-uppercase title-color">Там есть мост дъявола</h3>
+              <p class="lowercase-fonts title-color">Да, по нему можно пройти!<br> Если вы осмелитесь,<br> разумеется
+              </p>
             </div>
           </li>
         </ul>
@@ -103,18 +91,15 @@
         </div>
         <ul class="services-list">
           <li class="services-item container-background-2">
-            <img class="services-img" src="images/services/accomodation-icon.svg" alt="Жильё">
-            <h3 class="titles-uppercase">Жилье</h3>
+            <h3 class="titles-uppercase accomodation">Жилье</h3>
             <p class="lowercase-fonts">Рекомендуем пожить в настоящем мотеле,всё как в кино!</p>
           </li>
           <li class="services-item">
-            <img class="services-img" src="images/services/food-icon-3.svg" alt="Еда">
-            <h3 class="titles-uppercase">Еда</h3>
+            <h3 class="titles-uppercase food">Еда</h3>
             <p class="lowercase-fonts">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="services-item container-background-2">
-            <img class="services-img" src="images/services/souvenirs-icon-2.svg" alt="Сувениры">
-            <h3 class="titles-uppercase">Сувениры</h3>
+            <h3 class="titles-uppercase souvenir">Сувениры</h3>
             <p class="lowercase-fonts">Не только китайского,но и настоящего местного производства!</p>
           </li>
         </ul>
