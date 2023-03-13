@@ -78,7 +78,6 @@ body {
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
   font-weight: 700;
   color: #ffffff;
   background-color: #756157;
@@ -87,16 +86,18 @@ body {
   width: 160px;
   min-height: 36px;
   border-radius: 4px;
-  border: none;
+  border: 0;
   cursor: pointer;
 }
 
-.button-all-hotels {
-  padding: 8px 50px 8px 50px;
-  width: 376px;
-  margin-bottom: 96px;
-  text-align: center;
-  border: none;
+.nav-main::after {
+  content: "";
+  height: 2px;
+  background-color: rgba(117,97,87, 0.3);
+  position: absolute;
+  top: 41px;
+  left: 0;
+  right: 0;
 }
 
 .navigation-list {
@@ -106,6 +107,7 @@ body {
   padding: 0;
   list-style-type: none;
   gap: 20px;
+  position: relative;
 }
 
 .navigation-user {
@@ -116,6 +118,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
   padding: 0;
   font-style: normal;
@@ -153,6 +156,7 @@ body {
   width: 507px;
   height: 64px;
 }
+
 /*Main*/
 
 .hero {
@@ -183,6 +187,7 @@ body {
   background-position: center, bottom;
   background-repeat: no-repeat;
 }
+
 /*Advantages*/
 
 .advantages-list {
@@ -198,11 +203,6 @@ body {
   align-items: center;
 }
 
-.advantages-content-container {
-  box-sizing: border-box;
-  padding: 113px 85px 113px 85px;
-}
-
 .advantages-img-container {
   grid-column: 1/-1;
   display: flex;
@@ -215,6 +215,8 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
+  box-sizing: border-box;
+  padding: 113px 85px 113px 85px;
 }
 
 .advantages-img-container div {
@@ -230,6 +232,32 @@ body {
   grid-row: 2/3;
   grid-column: 1/2;
   background-color: rgba(131,179,211,0.12);
+}
+
+.titles-uppercase {
+  position: relative;
+}
+
+.advantages-list .titles-uppercase:after {
+  content: "";
+  height: 2px;
+  background-color: rgba(117,97,87, 0.3);
+  position: absolute;
+  top: 73px;
+  width: 65px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.advantages-list .title-color:after {
+  content: "";
+  height: 2px;
+  background-color: rgba(255,255,255,0.3);
+  position: absolute;
+  top: 73px;
+  width: 65px;
+  left:50%;
+  transform: translateX(-50%);
 }
 
 /*Services*/
@@ -333,6 +361,15 @@ body {
   align-items: center;
 }
 
+
+.button-all-hotels {
+  padding: 8px 50px 8px 50px;
+  width: 376px;
+  height: 52px;
+  margin-bottom: 96px;
+  border: none;
+}
+
 /*Footer*/
 
 .subscription {
@@ -351,6 +388,8 @@ body {
 }
 
 .subscription-container {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   padding: 96px 258px 104px 258px;
 }
@@ -358,12 +397,27 @@ body {
 .subscription-form {
   display: flex;
   flex-direction: row;
+  border-radius: 4px 0px 0px 4px;
+  width: 684px;
   min-height: 52px;
-  width: 800px;
+}
+
+.button-subscription {
+  width: 232px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
 }
 
 .subscription-form input {
   width: 100%;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.subscription-form input::placeholder {
+  padding-left: 20px;
 }
 
 .button-color {
@@ -381,6 +435,11 @@ body {
 .footer-contacts-tel, .footer-contacts-site {
   align-items: center;
   justify-content: center;
+}
+
+.footer-contacts-tel {
+  width: 331px;
+  height: 40px;
 }
 
 .footer-contacts {
@@ -462,3 +521,54 @@ body {
   background-color: #83B3D333;
 }
 
+.footer-contacts a.vk-icon,
+.footer-contacts a.tg-icon,
+.footer-contacts a.youtube-icon {
+  color: #83B3D3;
+}
+
+.footer-contacts a.vk-icon:hover,
+.footer-contacts a.tg-icon:hover,
+.footer-contacts a.youtube-icon:hover {
+  color: #68A2CA;
+}
+
+.footer-contacts a.vk-icon:focus,
+.footer-contacts a.tg-icon:focus
+.footer-contacts a.youtube-icon:hover {
+  color: #68A2CA;
+}
+
+.footer-contacts a.vk-icon:active,
+.footer-contacts a.tg-icon:active,
+.footer-contacts a.youtube-icon:active {
+  color: rgba(104,162,202,0.3);
+}
+
+.footer-contacts-tel:hover {
+  color:#756157;
+}
+
+.footer-contacts-tel:focus {
+  color:#756157;
+}
+
+.footer-contacts-tel:active {
+  color: rgba(117,97,87, 0.3);
+}
+
+.footer-contacts a.site-icon {
+  color:#000000;
+}
+
+.footer-contacts a.site-icon:hover {
+  color: #756157;
+}
+
+.footer-contacts a.site-icon:focus {
+  color: #756157;
+}
+
+.footer-contacts a.site-icon:active {
+  color: rgba(117, 97, 87, 0.3);
+}
