@@ -181,7 +181,7 @@ body {
 }
 
 .hero-imgs {
-  background-image: url("../images/welcome.png"), url("../images/divider.png");
+  background-image: url("../images/welcome.png.jpg"), url("../images/divider.png");
   width: 100%;
   flex: 1;
   background-position: center, bottom;
@@ -262,46 +262,42 @@ body {
 
 /*Services*/
 
-.accomodation {
-  position:relative;
+.all-services {
+position: relative;
 }
 
-.food {
-  position:relative;
-}
-
-.souvenir {
-  position:relative;
-}
-
-.food::before {
-  content: url("..//images/services/food-icon-3.svg");
+.all-services::before {
+  content: '';
   display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.food::before {
+  background-image: url("../images/services/food-icon-3.svg");
   width: 75px;
   height: 72px;
-  position: absolute;
-  bottom: 47px;
-  right: 78px;
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .accomodation::before {
-  content: url("..//images/services/accomodation-icon.svg");
-  display: block;
+  background-image: url("../images/services/accomodation-icon.svg");
   width: 75px;
   height: 72px;
-  position: absolute;
-  bottom: 50px;
-  right: 78px;
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .souvenir::before {
-  content: url("..//images/services/souvenirs-icon-2.svg");
-  display: block;
+  background-image: url("../images/services/souvenirs-icon-2.svg");
   width: 75px;
   height: 72px;
-  position: absolute;
   bottom: 55px;
-  right: 75px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .services {
