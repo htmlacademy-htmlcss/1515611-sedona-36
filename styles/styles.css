@@ -524,7 +524,7 @@ body {
 }
 
 .footer-contacts a.vk-icon:focus,
-.footer-contacts a.tg-icon:focus
+.footer-contacts a.tg-icon:focus,
 .footer-contacts a.youtube-icon:hover {
   color: #68A2CA;
 }
