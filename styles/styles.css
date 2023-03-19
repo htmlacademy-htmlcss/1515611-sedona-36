@@ -21,7 +21,7 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  font-family: "PT-Sans","Arial", sans-serif;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -53,6 +53,7 @@ body {
 
 .page-header {
   background-color: #ffffff;
+  min-height: 64px;
 }
 
 .navigation-header {
@@ -70,14 +71,28 @@ body {
   left: 70px;
 }
 
-.icons {
-  margin-right: 40px;
+.logo:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.logo:focus {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.logo:active {
+  opacity: 50%;
+  cursor: pointer;
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: inherit;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 700;
   color: #ffffff;
   background-color: #756157;
@@ -90,7 +105,30 @@ body {
   cursor: pointer;
 }
 
-.nav-main::after {
+.button-header {
+  width: 160px;
+  min-height: 36px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.button:hover {
+  background-color: #87695b;
+  cursor: pointer;
+}
+
+.button:focus {
+  background-color: #87695b;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #936d5b;
+  cursor: pointer;
+}
+
+.navigation-link:hover::after {
   content: "";
   height: 2px;
   background-color: rgba(117,97,87, 0.3);
@@ -98,23 +136,40 @@ body {
   top: 41px;
   left: 0;
   right: 0;
+  cursor: pointer;
+}
+
+.navigation-link:focus {
+  color: #83B3D3;
+  cursor: pointer;
+}
+
+.navigation-link:active {
+  color: #83B3D3;
+  cursor: pointer;
 }
 
 .navigation-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  gap: 20px;
+  gap: 30px;
   position: relative;
+  padding-left: 20px;
 }
 
 .navigation-user {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 268px;
+}
+
+.navigation-user a {
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .navigation-link {
@@ -153,8 +208,33 @@ body {
   align-items: center;
   padding: 0px;
   gap: 30px;
-  width: 507px;
   height: 64px;
+}
+
+.navigation-user .icon-search,
+.navigation-user .icon-heart {
+  position: relative;
+  width: 44px;
+  height: 100%;
+}
+
+.navigation-user .button-header {
+  margin-left: 20px;
+}
+
+.favourites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 4px;
+  top: 11px;
+  background-color: #6C9E42;
+  border-radius: 10px;
+  color: white;
+  font-size: 10px;
 }
 
 /*Main*/
@@ -165,7 +245,7 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: rgba(117,97,87, 0.3);
   background-image: url("../images/divider.png"), url("../images/photos/index-background.jpg");
   min-height: 485px;
   color: #000000;
@@ -197,6 +277,13 @@ body {
   align-items: center;
 }
 
+.advantages-wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
 .advantages-img-container {
   grid-column: 1/-1;
   display: flex;
@@ -210,11 +297,20 @@ body {
   flex-direction: column;
   height: 100%;
   box-sizing: border-box;
-  padding: 113px 85px 113px 85px;
+  padding: 102px 85px 102px 85px;
+  min-height: 384px;
 }
 
 .advantages-img-container div {
   width: 400px;
+}
+
+.advantages-img-container h3 {
+  margin-bottom: 62px;
+}
+
+.advantages-img-container p {
+  margin-top: 0;
 }
 
 .advantages-div-style {
@@ -226,6 +322,10 @@ body {
   grid-row: 2/3;
   grid-column: 1/2;
   background-color: rgba(131,179,211,0.12);
+}
+
+.title-wrapper {
+  margin-bottom: 45px;
 }
 
 .titles-uppercase {
@@ -295,6 +395,13 @@ body {
   transform: translateX(-50%);
 }
 
+.all-services {
+  margin-bottom: 30px;
+}
+
+.text-wrapper {
+  margin: 0;
+}
 .services {
   color: #000000;
   background-color: #ffffff;
@@ -307,14 +414,15 @@ body {
   flex-wrap: wrap;
   align-items: center;
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 .services-item {
   box-sizing: border-box;
-  padding: 81px 85px 81px 85px;
+  padding: 150px 85px 81px 85px;
   display: flex;
   flex-direction: column;
-  height: 385px;
+  min-height: 385px;
   width: 400px;
   justify-content: center;
 }
@@ -329,14 +437,18 @@ body {
 .services-container {
   margin-top: 64px;
   margin-bottom: 64px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
  /*Purchase*/
 
 .purchase {
+  display: flex;
+  justify-content: center;
   background-color: #ffffff;
   color: #000000;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 28px;
   text-align: center;
   min-height: 406px;
@@ -345,18 +457,24 @@ body {
 .purchase-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
   align-items: center;
   box-sizing: border-box;
-  padding: 96px 304px 96px 304px;
+  padding: 96px 0;
+}
+
+.purchase-title {
+  margin: 0;
+}
+
+.purchase-subtitle {
+  margin: 0;
+  margin-top: 12px;
 }
 
 .button-all-hotels {
-  padding: 8px 50px 8px 50px;
   width: 376px;
   height: 52px;
-  margin-bottom: 96px;
+  margin-top: 50px;
   border: none;
 }
 
@@ -365,10 +483,10 @@ body {
 .subscription {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: #ffffff;
   text-align: center;
+  background-color: rgba(255,255,255,0.3);
   background-image: url("../images/photos/subscribe-sedona.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -381,7 +499,22 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 96px 258px 104px 258px;
+  padding-top: 96px;
+}
+
+.subscription-title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.subscription-subtitle {
+  margin: 0;
+  margin-bottom: 54px;
+}
+
+.subscription-container p:first-child {
+  margin: 0px;
+  margin-bottom: 10px;
 }
 
 .subscription-form {
@@ -399,15 +532,38 @@ body {
 
 }
 
+.button-subscription:hover {
+  background-color: #7fb6db;
+  cursor: pointer;
+}
+
+.button-subscription:focus {
+  background-color: #7fb6db;
+  cursor: pointer;
+}
+
+.button-subscription:active {
+  background-color: #8fcaf1;
+  cursor: pointer;
+}
+
 .subscription-form input {
-  width: 100%;
+  flex: 1;
   border: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  font-family: inherit;
+  background-color: #f2f2f2;
+}
+
+.subscription-form input:hover {
+  cursor: pointer;
 }
 
 .subscription-form input::placeholder {
-  padding-left: 20px;
+  padding-left: 18px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .button-color {
@@ -419,17 +575,17 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  min-height: 120px;
 }
 
 .footer-contacts-tel, .footer-contacts-site {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .footer-contacts-tel {
-  width: 331px;
-  height: 40px;
+  text-decoration: none;
+  font-size: 40px;
 }
 
 .footer-contacts {
@@ -437,6 +593,8 @@ body {
   justify-content: space-around;
   align-items: center;
   min-height: 120px;
+  box-sizing: border-box;
+  gap: 120px;
 }
 
 .social-media {
@@ -445,29 +603,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
-}
-
-.social-media li {
-  margin-left: 20px;
-}
-
-.heart {
-  position: relative;
-}
-
-.favourites {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 10px;
-  top: -7px;
-  background-color: #6C9E42;
-  border-radius: 10px;
-  color: white;
-  font-size: 10px;
 }
 
 .title-color {
@@ -561,4 +696,16 @@ body {
 
 .footer-contacts a.site-icon:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.site-icon {
+  height: 33px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 40px;
 }
