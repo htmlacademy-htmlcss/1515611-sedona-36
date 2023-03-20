@@ -637,7 +637,6 @@ body {
 }
 
 .footer-contacts a {
-  color: #000000;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -741,15 +740,19 @@ body {
   color: rgba(104,162,202,0.3);
 }
 
-.footer-contacts-tel:hover {
+.footer-contacts-tel a {
+  color: #000000;
+}
+
+.footer-contacts-tel a:hover {
   color:#756157;
 }
 
-.footer-contacts-tel:focus {
+.footer-contacts-tel a:focus {
   color:#756157;
 }
 
-.footer-contacts-tel:active {
+.footer-contacts-tel a:active {
   color: rgba(117,97,87, 0.3);
 }
 
