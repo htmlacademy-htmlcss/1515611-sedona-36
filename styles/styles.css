@@ -27,6 +27,7 @@ body {
   line-height: 26px;
   text-align: center;
   color: #000000;
+  background-color: #E5E5E5;
 }
 
 .visually-hidden {
@@ -47,6 +48,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  background-color: white;
 }
 
 /*Header*/
@@ -61,6 +63,10 @@ body {
   position: relative;
   margin: 0 auto;
   justify-content: space-between;
+}
+
+.logo-container {
+  height: 64px;
 }
 
 .logo {
@@ -82,7 +88,7 @@ body {
 }
 
 .logo:active {
-  opacity: 50%;
+  opacity: 30%;
   cursor: pointer;
 }
 
@@ -114,18 +120,24 @@ body {
 }
 
 .button:hover {
-  background-color: #87695b;
+  background-color: #615048;
   cursor: pointer;
 }
 
 .button:focus {
-  background-color: #87695b;
+  background-color: #615048;
   cursor: pointer;
 }
 
 .button:active {
-  background-color: #936d5b;
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
+}
+
+.button[disabled] {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
 }
 
 .navigation-link:hover::after {
@@ -133,19 +145,30 @@ body {
   height: 2px;
   background-color: rgba(117,97,87, 0.3);
   position: absolute;
-  top: 41px;
+  bottom: -20px;
   left: 0;
   right: 0;
   cursor: pointer;
 }
 
 .navigation-link:focus {
-  color: #83B3D3;
+  color: #68A2CA;
   cursor: pointer;
 }
 
 .navigation-link:active {
-  color: #83B3D3;
+  color: #82B3D3;
+  cursor: pointer;
+}
+
+.navigation-link.current::after {
+  content: "";
+  height: 2px;
+  background-color: rgba(117,97,87, 0.3);
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
   cursor: pointer;
 }
 
@@ -153,11 +176,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0;
   list-style-type: none;
-  gap: 30px;
+  gap: 32px;
   position: relative;
-  padding-left: 20px;
+  padding: 20px 0;
+  padding-left: 14px;
 }
 
 .navigation-user {
@@ -208,14 +231,14 @@ body {
   align-items: center;
   padding: 0px;
   gap: 30px;
-  height: 64px;
+  /* height: 64px; */
 }
 
 .navigation-user .icon-search,
 .navigation-user .icon-heart {
   position: relative;
   width: 44px;
-  height: 100%;
+  height: 44px;
 }
 
 .navigation-user .button-header {
@@ -230,11 +253,26 @@ body {
   width: 20px;
   height: 20px;
   right: 4px;
-  top: 11px;
+  top: 2px;
   background-color: #6C9E42;
   border-radius: 10px;
   color: white;
   font-size: 10px;
+}
+
+.icon-search:hover,
+.icon-heart:hover {
+  color: #83B3D3;
+}
+
+.icon-search:focus,
+.icon-heart:focus {
+  color: #83B3D3;
+}
+
+.icon-search:active,
+.icon-heart:active {
+  color: #5c7e95;
 }
 
 /*Main*/
@@ -267,7 +305,7 @@ body {
 .advantages-list {
   display: grid;
   grid-template-columns: repeat(3, 400px);
-  grid-auto-rows: 385px ;
+  /* grid-auto-rows: 385px ; */
   width: 1200px;
   margin: 0;
   padding: 0;
@@ -280,14 +318,30 @@ body {
 .advantages-wrap {
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 75px;
-  margin-bottom: 75px;
+  margin-top: 71px;
+  margin-bottom: 89px;
+}
+
+.advantages-title {
+  margin-bottom: 24px;
+}
+
+.advantages-subtitle {
+  margin-top: 0;
 }
 
 .advantages-img-container {
   grid-column: 1/-1;
   display: flex;
-  height: 100%;
+  min-height: 384px;
+}
+
+.advantages-container-title {
+  margin-top: 0;
+}
+
+.advantages-container-subtitle {
+  margin-bottom: 0;
 }
 
 .advantages-content-container {
@@ -295,7 +349,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  min-height: 384px;
   box-sizing: border-box;
   padding: 102px 85px 102px 85px;
   min-height: 384px;
@@ -332,23 +386,16 @@ body {
   position: relative;
 }
 
-.advantages-list .titles-uppercase::after {
+.advantages-img-container .advantages-container-title::after {
+  background-color: rgba(255,255,255, 0.3);
+}
+
+.advantages-container-title::after {
   content: "";
   height: 2px;
   background-color: rgba(117,97,87, 0.3);
   position: absolute;
-  top: 73px;
-  width: 65px;
-  left:50%;
-  transform: translateX(-50%);
-}
-
-.advantages-list .title-color::after {
-  content: "";
-  height: 2px;
-  background-color: rgba(255,255,255,0.3);
-  position: absolute;
-  top: 73px;
+  bottom: -32px;
   width: 65px;
   left:50%;
   transform: translateX(-50%);
@@ -372,7 +419,7 @@ body {
   background-image: url("../images/services/food-icon-3.svg");
   width: 75px;
   height: 72px;
-  bottom: 55px;
+  bottom: 58px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -381,16 +428,16 @@ body {
   background-image: url("../images/services/accomodation-icon.svg");
   width: 75px;
   height: 72px;
-  bottom: 55px;
+  bottom: 58px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .souvenir::before {
   background-image: url("../images/services/souvenirs-icon-2.svg");
-  width: 75px;
+  width: 72px;
   height: 72px;
-  bottom: 55px;
+  bottom: 58px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -419,12 +466,17 @@ body {
 
 .services-item {
   box-sizing: border-box;
-  padding: 150px 85px 81px 85px;
+  padding: 81px 85px 81px 85px;
   display: flex;
   flex-direction: column;
   min-height: 385px;
   width: 400px;
   justify-content: center;
+}
+
+.services-item-title {
+  margin-top: 0;
+  padding-top: 103px;
 }
 
 .services-img {
@@ -435,10 +487,18 @@ body {
 }
 
 .services-container {
-  margin-top: 64px;
+  margin-top: 66px;
   margin-bottom: 64px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.services-container-title {
+  margin-bottom: 0;
+}
+
+.services-container-subtitle {
+  margin-top: 18px;
 }
 
  /*Purchase*/
@@ -468,13 +528,13 @@ body {
 
 .purchase-subtitle {
   margin: 0;
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
 .button-all-hotels {
   width: 376px;
   height: 52px;
-  margin-top: 50px;
+  margin-top: 52px;
   border: none;
 }
 
@@ -486,7 +546,7 @@ body {
   align-items: center;
   color: #ffffff;
   text-align: center;
-  background-color: rgba(255,255,255,0.3);
+  background-color: #756157;
   background-image: url("../images/photos/subscribe-sedona.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -533,18 +593,24 @@ body {
 }
 
 .button-subscription:hover {
-  background-color: #7fb6db;
+  background-color: #68A2CA;
   cursor: pointer;
 }
 
 .button-subscription:focus {
-  background-color: #7fb6db;
+  background-color: #68A2CA;
   cursor: pointer;
 }
 
 .button-subscription:active {
-  background-color: #8fcaf1;
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
+}
+
+.button-subscription:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
 }
 
 .subscription-form input {
@@ -575,34 +641,39 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-}
-
-.footer-contacts-tel, .footer-contacts-site {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-contacts-tel {
   text-decoration: none;
   font-size: 40px;
 }
 
+.footer-contacts-tel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  transform: translate(14px, 8px);
+}
+
+.footer-contacts-site {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  margin-top: 9px;
+}
+
 .footer-contacts {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   min-height: 120px;
   box-sizing: border-box;
-  gap: 120px;
+  margin: 0 70px;
 }
 
 .social-media {
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 0;
+  flex: 1;
 }
 
 .title-color {
@@ -699,7 +770,7 @@ body {
 }
 
 .site-icon {
-  height: 33px;
+  height: 33px;;
 }
 
 .social-icon {
@@ -708,4 +779,8 @@ body {
   justify-content: center;
   width: 47px;
   height: 40px;
+}
+
+.nav-container-logo {
+  height: 100%;
 }

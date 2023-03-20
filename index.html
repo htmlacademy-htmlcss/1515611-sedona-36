@@ -13,11 +13,13 @@
     <header class="page-header">
       <nav class="navigation-header">
         <div class="nav-container-1">
-          <a>
-            <img class="logo" src="images/logos/logo-2.svg" width="140" height="70" alt="Лого Седоны.">
+          <a class="nav-container-logo">
+            <div class="logo-container">
+              <img class="logo" src="images/logos/logo-2.svg" width="140" height="70" alt="Лого Седоны.">
+            </div>
           </a>
           <ul class="navigation-list">
-            <li class="navigation-item"><a class="navigation-link" href="#">Главная</a></li>
+            <li class="navigation-item"><a class="navigation-link current" href="#">Главная</a></li>
             <li class="navigation-item"><a class="navigation-link" href="#">О Седоне</a></li>
             <li class="navigation-item"><a class="navigation-link" href="#">Гостиницы</a></li>
           </ul>
@@ -27,7 +29,7 @@
             <span class="visually-hidden">Поиск.</span>
             <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="19" height="19" role="img" aria-label="Поиск"
               fill="none">
-              <path fill="#000"
+              <path fill="currentColor"
                 d="m18.5 17-3.7-3.7a8 8 0 0 0 1.7-4.8 8 8 0 1 0-3.1 6.3l3.7 3.7 1.4-1.5Zm-10-2.5a6 6 0 0 1-6-6 6 6 0 0 1 12 0 6 6 0 0 1-6 6Z" />
             </svg>
           </a>
@@ -36,7 +38,7 @@
             <span class="favourites">12</span>
             <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="20" height="20" role="img"
               aria-label="Избранное" fill="none">
-              <path fill="#000"
+              <path fill="currentColor"
                 d="M9.9 19a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5 6.1 6.9 6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
             </svg>
           </a>
@@ -52,37 +54,40 @@
       <section class="advantages">
         <div class="advantages-wrap">
           <h2 class="visually-hidden">Преимущества.</h2>
-          <p class="main-titles-uppercase">Седона — небольшой городок в Аризоне,<br>
+          <p class="advantages-title main-titles-uppercase">Седона — небольшой городок в Аризоне,<br>
             Заслуживающий большего!<br>
           </p>
-          <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <p class="advantages-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
         <ul class="advantages-list">
           <li class="advantages-img-container">
             <div class="advantages-content-container container-background-1">
-              <h3 class="titles-uppercase title-color">Настоящий городок</h3>
-              <p class="lowercase-fonts title-color">Седона — не аттракцион для туристов, там
+              <h3 class="advantages-container-title titles-uppercase title-color">Настоящий городок</h3>
+              <p class="advantages-container-subtitle lowercase-fonts title-color">Седона — не аттракцион для туристов,
+                там
                 течёт своя жизнь</p>
             </div>
             <img src="images/photos/sedona-town.jpg" width="800" height="385" alt="Фото Седоны.">
           </li>
           <li class="advantages-content-container container-background-2">
-            <h3 class="titles-uppercase title-wrapper">Небольшая площадь</h3>
-            <p class="lowercase-fonts">Все достопримечательности находятся очень близко</p>
+            <h3 class="advantages-container-title titles-uppercase title-wrapper">Небольшая площадь</h3>
+            <p class="advantages-container-subtitle lowercase-fonts">Все достопримечательности находятся очень близко
+            </p>
           </li>
           <li class="advantages-content-container container-background-3">
-            <h3 class="titles-uppercase title-wrapper">Красивая<br> дорога</h3>
-            <p class="lowercase-fonts">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <h3 class="advantages-container-title titles-uppercase title-wrapper">Красивая<br> дорога</h3>
+            <p class="advantages-container-subtitle lowercase-fonts">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="advantages-content-container container-background-2">
-            <h3 class="titles-uppercase title-wrapper">Мало<br> туристов</h3>
-            <p class="lowercase-fonts">Большинство едет в Гранд Каньон и толпится там</p>
+            <h3 class="advantages-container-title titles-uppercase title-wrapper">Мало<br> туристов</h3>
+            <p class="advantages-container-subtitle lowercase-fonts">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="advantages-img-container">
             <img src="images/photos/devils-bridge.jpg" width="800" height="385" alt="Мост дъявола.">
             <div class="advantages-content-container container-background-1">
-              <h3 class="titles-uppercase title-color">Там есть<br> мост дъявола</h3>
-              <p class="lowercase-fonts title-color">Да, по нему можно пройти!<br> Если вы осмелитесь,<br> разумеется
+              <h3 class="advantages-container-title titles-uppercase title-color">Там есть<br> мост дъявола</h3>
+              <p class="advantages-container-subtitle lowercase-fonts title-color">Да, по нему можно пройти!<br> Если вы
+                осмелитесь,<br> разумеется
               </p>
             </div>
           </li>
@@ -91,21 +96,22 @@
       <section class="services">
         <div class="services-container">
           <h2 class="visually-hidden">Услуги Седоны.</h2>
-          <p class="main-titles-uppercase">Приезжайте в Седону отдохнуть <br> в комфорте и уюте!</p>
-          <p>Опытный персонал и качественное обслуживание!</p>
+          <p class="services-container-title main-titles-uppercase">Приезжайте в Седону отдохнуть <br> в комфорте и
+            уюте!</p>
+          <p class="services-container-subtitle">Опытный персонал и качественное обслуживание!</p>
         </div>
         <ul class="services-list">
           <li class="services-item container-background-2">
-            <h3 class="titles-uppercase accomodation all-services">Жилье</h3>
+            <h3 class="services-item-title titles-uppercase accomodation all-services">Жилье</h3>
             <p class="text-wrapper lowercase-fonts">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="services-item">
-            <h3 class="titles-uppercase food all-services">Еда</h3>
+            <h3 class="services-item-title titles-uppercase food all-services">Еда</h3>
             <p class="text-wrapper lowercase-fonts">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
             </p>
           </li>
           <li class="services-item container-background-2">
-            <h3 class="titles-uppercase souvenir all-services">Сувениры</h3>
+            <h3 class="services-item-title titles-uppercase souvenir all-services">Сувениры</h3>
             <p class="text-wrapper lowercase-fonts">Не только китайского, но и настоящего местного производства!</p>
           </li>
         </ul>
@@ -164,8 +170,8 @@
             </a>
           </li>
         </ul>
-        <div>
-          <a class="footer-contacts-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <div class="footer-contacts-tel">
+          <a href="tel:+78128121212">+7 (812) 812-12-12</a>
         </div>
         <div class="footer-contacts-site">
           <a class="site-icon" href="https://htmlacademy.ru/">
